@@ -9,7 +9,7 @@
 
 /* eslint-disable max-len */
 
-export const port = process.env.PORT || 3000;
+export const port = process.env.PORT || 31429;
 export const host = process.env.WEBSITE_HOSTNAME || `localhost:${port}`;
 
 export const databaseUrl = process.env.DATABASE_URL || 'sqlite:database.sqlite';
@@ -18,7 +18,7 @@ export const analytics = {
 
   // https://analytics.google.com/
   google: {
-    trackingId: process.env.GOOGLE_TRACKING_ID, // UA-XXXXX-X
+    trackingId: process.env.GOOGLE_TRACKING_ID || 'UA-52779254-1',
   },
 
 };
@@ -29,8 +29,8 @@ export const auth = {
 
   // https://developers.facebook.com/
   facebook: {
-    id: process.env.FACEBOOK_APP_ID || '186244551745631',
-    secret: process.env.FACEBOOK_APP_SECRET || 'a970ae3240ab4b9b8aae0f9f0661c6fc',
+    id: process.env.FACEBOOK_APP_ID || '1855047338102239',
+    secret: process.env.FACEBOOK_APP_SECRET || 'c2c34e25a166dc47cb111ef2fb02c46c',
   },
 
   // https://cloud.google.com/console/project

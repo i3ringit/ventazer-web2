@@ -14,7 +14,7 @@
 }
 
 .root {
-  background: #373277;
+  background: rgb(33, 150, 243);
   color: #fff;
 }
 
@@ -32,6 +32,7 @@
 
 .brandTxt {
   margin-left: 10px;
+  color: #fff;
 }
 
 .nav {
@@ -53,7 +54,7 @@
 
 .bannerDesc {
   padding: 0;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1.25em;
   margin: 0;
 }
