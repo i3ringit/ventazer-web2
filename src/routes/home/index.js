@@ -8,32 +8,24 @@
  */
 
 import React from 'react';
-import Home from './Home';
-import fetch from '../../core/fetch';
 import Layout from '../../components/Layout';
+import Page from '../../components/Page';
+
+const title = 'Marcos del Cristo - Home';
 
 export default {
 
   path: '/',
 
   async action() {
-    const resp = await fetch('/graphql', {
-      method: 'post',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        query: '{news{title,link,content}}',
-      }),
-      credentials: 'include',
-    });
-    const { data } = await resp.json();
-    if (!data || !data.news) throw new Error('Failed to load the news feed.');
+    const data = await require.ensure([], require => require('./about.md'), 'about');
+
+    if (!data || !data.title) throw new Error('Failed to load the about feed.');
+
     return {
-      title: 'React Starter Kit',
-      component: <Layout><Home news={data.news} /></Layout>,
+      title,
+      chunk: 'about',
+      component: <Layout><Page {...data} /></Layout>,
     };
   },
-
 };

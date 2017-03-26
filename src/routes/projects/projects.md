@@ -1,5 +1,5 @@
 ---
-title: About Us
+title: Projects
 component: ContentPage
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat
