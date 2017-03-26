@@ -8,32 +8,19 @@
  */
 
 import React from 'react';
-import Projects from './Projects';
-import fetch from '../../core/fetch';
 import Layout from '../../components/Layout';
+import Projects from './Projects';
+
+const title = 'Marcos del Cristo - Projects';
 
 export default {
 
   path: '/Projects',
 
-  async action() {
-    const resp = await fetch('/graphql', {
-      method: 'post',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        query: '{news{title,link,content}}',
-      }),
-      credentials: 'include',
-    });
-    const { data } = await resp.json();
-    if (!data || !data.news) throw new Error('Failed to load the news feed.');
+  action() {
     return {
-      title: 'Marcos del Cristo - Projects',
-      component: <Layout><Projects news={data.news} /></Layout>,
+      title,
+      component: <Layout><Projects title={title} /></Layout>,
     };
   },
-
 };
