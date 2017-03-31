@@ -20,37 +20,30 @@
   max-width: var(--max-content-width);
 }
 
-.badgeIcon {
-  margin-right: 20px;
+.newsItem {
+  margin: 0 0 2rem;
 }
 
-.cardContainer {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 40px;
+.newsTitle {
+  font-size: 1.5rem;
 }
 
-.first {
-  float: left;
-  width: 30%;
-}
+.newsDesc {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.125rem;
+  }
 
-.second {
-  margin: 0 auto;
-  display: inline-block;
-  width: 30%;
-}
+  pre {
+    white-space: pre-wrap;
+    font-size: 0.875rem;
+  }
 
-.third {
-  float: right;
-  width: 30%;
-}
-
-.fourth {
-  float: left;
-  width: 30%;
-}
-
-.clearLeft {
-  clear: left;
+  img {
+    max-width: 100%;
+  }
 }

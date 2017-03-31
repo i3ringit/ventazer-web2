@@ -12,7 +12,7 @@ My name is Marcos del Cristo, I am a software developer residing in Champaign, I
 
 **Environment:** I'm looking for an environment where a smart, motivated, and hard-working developer can grow and learn. I work very hard to make sure I’m not a burden on my team; constantly looking to improve, always receptive and responsive to criticism.
 
-**Team:** I want to work with a professional team and write great software, including testing, debugging and profiling. One of my goals in life is to develop quality software that makes a difference. I want to work with like-minded individuals, a team excited to come to the office and make something great, together.
+**Team:** I want to work with a professional team and write great software, including testing, debugging and profiling. My goal is to develop quality software that makes a difference. I want to work with like-minded individuals, a team excited to come to the office and make something great, together.
 
 **Work/Life Balance:** I understand it’s up to me to become the best engineer I can be, so I spend the necessary time after work hours to push the boundaries of my technical abilities. I also understand there are times when extra work is required for time-sensitive deadlines, I’m more than happy to hunker down and get things done then. Having said that, working 80 hours a week all the time is not sustainable.
 
