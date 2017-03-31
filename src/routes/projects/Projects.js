@@ -1,10 +1,7 @@
 /**
- * React Starter Kit (https://www.reactstarterkit.com/)
+ * Marcos del Cristo (https://www.mdelcristo.info/)
  *
- * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
+ * Copyright © 2017-present Marcos del Cristo. All rights reserved.
  */
 
 import React, { PropTypes } from 'react';
@@ -20,6 +17,7 @@ import mySite from './img/thumbnails/my-website.jpg';
 import ventazer from './img/thumbnails/ventazer.jpg';
 import vetmedAnimals from './img/thumbnails/vetmed-animals.jpg';
 import vetmedMulti from './img/thumbnails/vetmed-multisite.jpg';
+import vetmedSchedule from './img/thumbnails/vetmed-schedule.jpg';
 import wordpress from './img/thumbnails/wordpress-sites.jpg';
 
 class Projects extends React.Component {
@@ -49,7 +47,7 @@ class Projects extends React.Component {
             <div className={s.first}>
               <Card
                 cardLink="/projects/vetmed-schedule"
-                cardSrc={vetmedMulti}
+                cardSrc={vetmedSchedule}
                 cardTitle="VetMed Schedule"
                 cardText="Scheduling system for VetMed @ University of Illinois."
               />
@@ -124,7 +122,7 @@ class Projects extends React.Component {
                 cardLink="/projects/ventazer"
                 cardSrc={ventazer}
                 cardTitle="Ventazer"
-                cardText="Ventazer is an upcoming ticketing platform."
+                cardText="Ventazer is an upcoming ticketing platform for mobile and the web."
               />
             </div>
 
