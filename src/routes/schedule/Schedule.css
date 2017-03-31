@@ -5,7 +5,7 @@
  */
 
 @import '../../components/variables.css';
-@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
 
 .root {
   padding-left: 20px;
