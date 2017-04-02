@@ -7,16 +7,182 @@
 @import '../../components/variables.css';
 @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
 
-.root {
-  padding-left: 20px;
-  padding-right: 20px;
-}
+/* BEM workaround:
+
+  sampleBlock     = cammelCase
+    Standalone entity, meaningful on its own.
+
+  sampleElement   = double__underscore
+    Part of block, has no standalone meaning, tied to its block.
+
+  sampleModifier  = single_underscore
+    A flag on a block or element, changes their apearance or behaviour.
+
+  sampleBlock__sampleElement_sampleModifier
+*/
 
 .container {
   margin: 0 auto;
-  padding: 0 0 40px;
-  max-width: var(--max-content-width);
+  max-width: 1440px;
+  min-width: 320px;
+  padding: 0 20px;
 }
+
+h1,
+h2,
+h3,
+h4 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h2 {
+  font-size: 29px;
+  font-size: 1.8125rem;
+}
+
+/* Section intro */
+.section__intro {
+  margin: 0 auto;
+  max-width: 285px;
+  text-align: center;
+}
+
+.textLarge {
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: 400;
+}
+
+.textNormal {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0.75em 0;
+}
+
+/* line 1465 */
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -30px;
+}
+
+.grid__item {
+  display: inline-block;
+  padding-left: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.grid__itemPhoto {
+  max-width: 550px;
+}
+
+.grid__itemText {
+  max-width: 40%;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    box-sizing: initial;
+    padding: 0 40px;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-size: 2.25rem;
+  }
+
+  .section__intro {
+    max-width: 80%;
+  }
+
+  .textLarge {
+    font-size: 26px;
+    font-size: 1.625rem;
+  }
+
+  .textNormal {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+
+  /* line 1733 */
+  .grid__itemPhoto {
+    max-width: 100%;
+  }
+
+  /* line 11340 */
+  .section__textAndMedia {
+    min-height: 760px;
+    padding-top: 40px;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .section__intro {
+    max-width: 550px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  h2 {
+    font-size: 46px;
+    font-size: 2.875rem;
+  }
+
+  .section__intro {
+    max-width: 60%;
+  }
+
+  .textLarge {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+
+  .textNormal {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+
+  /* line 1919 */
+  .grid__itemPhoto {
+    width: 58.333%;
+  }
+
+  /* line 11346 */
+  .section__textAndMedia {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 775px;
+    padding-top: 60px;
+  }
+}
+
+/* Section intro heading */
+
+/* Line 9413 */
+.section__intro h1,
+.section__intro h2 {
+  margin-bottom: 0.3em;
+}
+
+.section__intro p {
+  margin: 0;
+}
+
+/* s */
 
 .floatRight {
   float: right;
