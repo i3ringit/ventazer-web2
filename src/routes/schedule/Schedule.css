@@ -12,13 +12,13 @@
   sampleBlock     = cammelCase
     Standalone entity, meaningful on its own.
 
-  sampleElement   = double__underscore
+  sampleElement   = single_underscore
     Part of block, has no standalone meaning, tied to its block.
 
-  sampleModifier  = single_underscore
+  sampleModifier  = double__underscore
     A flag on a block or element, changes their apearance or behaviour.
 
-  sampleBlock__sampleElement_sampleModifier
+  sampleBlock_sampleElement__sampleModifier
 */
 
 .container {
@@ -31,7 +31,8 @@
 h1,
 h2,
 h3,
-h4 {
+h4,
+.beta {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-weight: 300;
@@ -39,13 +40,24 @@ h4 {
   margin: 0;
 }
 
-h2 {
+h2,
+.beta {
   font-size: 29px;
   font-size: 1.8125rem;
 }
 
+h3 {
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+
+img {
+  border-style: none;
+}
+
 /* Section intro */
-.section__intro {
+
+.section_intro {
   margin: 0 auto;
   max-width: 285px;
   text-align: center;
@@ -65,7 +77,6 @@ h2 {
   margin: 0.75em 0;
 }
 
-/* line 1465 */
 .grid {
   list-style: none;
   margin: 0;
@@ -73,20 +84,49 @@ h2 {
   margin-left: -30px;
 }
 
-.grid__item {
+.grid_item {
   display: inline-block;
   padding-left: 30px;
+  vertical-align: top;
   width: 100%;
   box-sizing: border-box;
+}
+
+.largeSection {
+  padding: 30px 0;
+}
+
+.largeSection_textAndMedia .uGrid__override {
+  padding-top: 0;
+}
+
+.grid__middle > .grid_item {
   vertical-align: middle;
 }
 
-.grid__itemPhoto {
+.largeSection_textAndMedia .largeSection_media {
   max-width: 550px;
 }
 
-.grid__itemText {
-  max-width: 40%;
+.largeSection_media img {
+  vertical-align: middle;
+}
+
+.largeSection_textAndMedia .largeSection_media img,
+.largeSection_textAndMedia .largeSection_media video {
+  display: block;
+  margin: 0 auto 30px;
+  max-height: none;
+  max-width: 100%;
+}
+
+[class*='push__'] {
+  position: relative;
+}
+
+.largeSection_textAndMedia .largeSection_text {
+  margin: 0 auto 30px;
+  max-width: 550px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -95,12 +135,26 @@ h2 {
     padding: 0 40px;
   }
 
-  h2 {
+  .tablet__oneWhole {
+    width: 100%;
+  }
+
+  .largeSection_textAndMedia .largeSection_media {
+    max-width: 100%;
+  }
+
+  h2,
+  .beta {
     font-size: 36px;
     font-size: 2.25rem;
   }
 
-  .section__intro {
+  h3 {
+    font-size: 26px;
+    font-size: 1.625rem;
+  }
+
+  .section_intro {
     max-width: 80%;
   }
 
@@ -114,31 +168,70 @@ h2 {
     font-size: 1.25rem;
   }
 
-  /* line 1733 */
-  .grid__itemPhoto {
-    max-width: 100%;
+  .largeSection_textAndMedia .uGrid__override {
+    padding-top: 60px;
   }
+}
 
-  /* line 11340 */
-  .section__textAndMedia {
-    min-height: 760px;
-    padding-top: 40px;
+@media only screen and (max-width: 599px) {
+  .textNormal {
+    font-size: 17px;
+    font-size: 1.1rem;
   }
 }
 
 @media only screen and (min-width: 780px) {
-  .section__intro {
+  .section_intro {
     max-width: 550px;
   }
 }
 
+@media only screen and (max-width: 999px) {
+  .largeSection_textAndMedia .largeSection_text {
+    margin-bottom: 0;
+  }
+
+  .largeSection_mediaDeskRight .uGrid__override {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-width: 999px) and (min-width: 320px) {
+  .largeSection_textAndMedia .largeSection_text {
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 999px) and (min-width: 600px) {
+  .largeSection {
+    padding: 45px 0;
+  }
+}
+
 @media only screen and (min-width: 1000px) {
-  h2 {
+  h2,
+  .beta {
     font-size: 46px;
     font-size: 2.875rem;
   }
 
-  .section__intro {
+  h3 {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+
+  .desktop__oneHalf {
+    width: 50%;
+  }
+
+  .section_intro {
     max-width: 60%;
   }
 
@@ -152,59 +245,62 @@ h2 {
     font-size: 1.375rem;
   }
 
-  /* line 1919 */
-  .grid__itemPhoto {
-    width: 58.333%;
+  .largeSection {
+    padding: 60px 0;
   }
 
-  /* line 11346 */
-  .section__textAndMedia {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    min-height: 775px;
+  .largeSection_textAndMedia .uGrid__override {
     padding-top: 60px;
   }
+
+  .desktop__fourTwelfths {
+    width: 33.333%;
+  }
+
+  .push__desktop__oneTwelfth {
+    left: 8.333%;
+  }
+
+  .push__desktop__twoTwelfths {
+    left: 16.666%;
+  }
+
+  .largeSection_textAndMedia .largeSection_text__offsetUp {
+    margin-top: -80px;
+  }
+
+  .largeSection_mediaDeskRight .largeSection_text {
+    margin-left: 45px;
+  }
+
+  .largeSection_mediaDeskRight .largeSection_media img {
+    float: left;
+  }
+}
+
+.uBgGrayLight {
+  background-color: #f5f5f5 !important;
 }
 
 /* Section intro heading */
 
-/* Line 9413 */
-.section__intro h1,
-.section__intro h2 {
+.section_intro h1,
+.section_intro h2 {
   margin-bottom: 0.3em;
 }
 
-.section__intro p {
+.section_intro p {
   margin: 0;
 }
 
-/* s */
-
-.floatRight {
-  float: right;
-  margin: 0 0 10px 10px;
-}
-
-.floatLeft {
-  float: left;
-  margin: 0 10px 10px 0;
-}
-
-.clearfix::after {
-  content: '';
-  clear: both;
-  display: table;
-}
-
-.badgeIcon {
-  margin-right: 20px;
+.uTightBottom {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 /* hide real input */
+
+/*
 #btn {
   position: absolute;
   left: 50%;
@@ -235,8 +331,11 @@ h2 {
   border-radius: 15px;
   background: rgba(90, 90, 90, 0.35);
 }
+*/
 
 /* switch button: on + glow in the dark */
+
+/*
 #btn:checked ~ .btn {
   background: linear-gradient(to bottom, #e9e4e0 0%, rgba(255, 255, 255, 0.1) 3%), linear-gradient(to top, #e5e0d8 0%, #f9f6f1 100%);
   box-shadow: 0 -4px 0 #d2cdc4 inset, 0 -3px 0 #e5e0d8, 0 0 0 4px #777069, 0 -2px 0 4px #777069, 0 0 0 10px #f9f6f2, 0 -2px 0 10px #f9f6f2, 0 0 0 11px #f0ebe7, 0 -2px 0 11px #f0ebe7, 0 0 0 20px #f9f6f2, 0 4px 1px 20px #e4e1dc, 0 -4px 0 20px #fdfcfb, 0 4px 20px 20px #000, 150px 0 100px rgba(240, 240, 0, 0);
@@ -254,15 +353,21 @@ h2 {
     box-shadow: 0 -3px 0 rgba(234, 230, 223, 1), inset 0 -3px 0 rgba(210, 205, 196, 0.7), 0 0 0 4px rgba(240, 240, 0, 0.75), 0 -2px 0 4px rgba(119, 112, 105, 0.3), 0 0 0 10px #f9f6f2, 0 -2px 0 10px #f9f6f2, 0 0 0 11px #f0ebe7, 0 -2px 0 11px #f0ebe7, 0 0 0 20px #f9f6f2, 0 4px 1px 20px #e4e1dc, 0 -4px 0 20px #fdfcfb, 0 4px 20px 20px #000, 0 0 200px rgba(240, 240, 0, 0.3), 0 0 200px rgba(240, 240, 0, 0.1), 150px 0 150px -45px rgba(240, 240, 0, 0.225), -150px 0 150px -45px rgba(240, 240, 0, 0.225);
   }
 }
+*/
 
 /* switch button - led: on */
+
+/*
 #btn:checked ~ .btn::after {
   margin: 14px 37px;
   background: rgba(248, 214, 8, 0.9);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 0 #fff, 0 0 3px rgba(248, 214, 8, 0.2), 0 0 4px rgba(248, 214, 8, 0.2), 0 0 5px rgba(248, 214, 8, 0.2), 0 0 6px rgba(248, 214, 8, 0.2), 0 0 7px rgba(248, 214, 8, 0.2);
 }
+*/
 
 /* bright room */
+
+/*
 #btn::after {
   position: fixed;
   content: '';
@@ -273,6 +378,7 @@ h2 {
   background: transparent;
   visibility: visible;
 }
+*/
 
 /* click */
 
@@ -286,6 +392,7 @@ h2 {
   font: 5em/1.15em 'Gloria Hallelujah', cursive;
 } */
 
+/*
 #btn::before {
   position: absolute;
   content: 'Hmm..';
@@ -294,8 +401,11 @@ h2 {
   visibility: visible;
   font: 5em/1.15em 'Gloria Hallelujah', cursive;
 }
+*/
 
 /* dark room */
+
+/*
 #btn:checked::after {
   background: rgba(0, 0, 0, 0.4);
 }
@@ -305,6 +415,7 @@ h2 {
   color: rgba(248, 214, 8, 0.8);
   text-shadow: 0 0 4px rgba(248, 214, 8, 0.2), -2px -2px 6px rgba(248, 214, 8, 0.3), 2px 2px 6px rgba(248, 214, 8, 0.3);
 }
+*/
 
 /*
 

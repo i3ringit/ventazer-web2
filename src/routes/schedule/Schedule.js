@@ -7,7 +7,8 @@
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Schedule.css';
-import php from '../projects/img/badges/badge-php.png';
+import image1 from './img/phone-1_1x.jpg';
+import image2 from './img/phone-1_2x.jpg';
 
 class Schedule extends React.Component {
   static propTypes = {
@@ -16,71 +17,107 @@ class Schedule extends React.Component {
 
   render() {
     return (
-      <div className={s.container}>
+      <div>
 
-        <section>
+        <section className={`${s.largeSection} ${s.uTightBottom} ${s.uBgGrayLight}`}>
 
-          <div className={s.section__intro}>
-            <h2 className={s.textLarge}>
-              VetMed Schedule
-            </h2>
-            <p className={s.textNormal}>Scheduling system for VetMed @ University of Illinois.</p>
-          </div>
+          <div className={s.container}>
 
-          <div className={`${s.grid} ${s.section__textAndMedia}`}>
-            <div className={`${s.grid__item} ${s.grid__itemPhoto}`}>photo</div>
-            <div className={`${s.grid__item} ${s.grid__itemText}`}>
-              <h3>title</h3>
-              <p>parragraph</p>
+            <div className={s.section_intro}>
+              <h2 className={s.textLarge}>
+                VetMed Schedule
+              </h2>
+              <p className={s.textNormal}>
+                Scheduling system for VetMed at the University of Illinois.
+              </p>
             </div>
+
+            <div className={`${s.largeSection} ${s.largeSection_textAndMedia}`}>
+              <div className={`${s.grid} ${s.grid__middle} ${s.uGrid__override}`}>
+
+                <div className={`${s.grid_item} ${s.desktop__oneHalf} ${s.tablet__oneWhole}`}>
+                  <div className={s.largeSection_media}>
+                    <img src={image1} srcSet={image2} alt="phone" />
+                  </div>
+                </div>
+
+                <div
+                  className={`${s.grid_item}
+                              ${s.push__desktop__oneTwelfth}
+                              ${s.desktop__fourTwelfths}
+                              ${s.tablet__oneWhole}`}
+                >
+                  <div className={`${s.largeSection_text} ${s.largeSection_text__offsetUp}`}>
+                    <h3 className={s.beta}>Hello World!</h3>
+                    <p className={s.textNormal}>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Ipsum voluptate, modi expedita magni explicabo.
+                      Laudantium accusamus ipsam reprehenderit quis unde.
+                      <br />
+                      <br />
+                      Repellat blanditiis distinctio autem amet sint quibusdam
+                      tempore, aliquid, praesentium dolorum, vitae accusantium
+                      alias nulla, doloremque suscipit laboriosam laudantium
+                      iusto.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div
+              className={`${s.largeSection}
+                          ${s.largeSection_textAndMedia}
+                          ${s.largeSection_mediaDeskRight}
+                          ${s.uTightBottom}`}
+            >
+              <div className={`${s.grid} ${s.grid__middle} ${s.uGrid__override}`}>
+
+                <div
+                  className={`${s.grid_item}
+                              ${s.push__desktop__oneTwelfth}
+                              ${s.desktop__fourTwelfths}
+                              ${s.tablet__oneWhole}`}
+                >
+                  <div className={`${s.largeSection_text} ${s.largeSection_text__offsetUp}`}>
+                    <h3 className={s.beta}>Hello World!</h3>
+                    <p className={s.textNormal}>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Ipsum voluptate, modi expedita magni explicabo.
+                      Laudantium accusamus ipsam reprehenderit quis unde.
+                      <br />
+                      <br />
+                      Repellat blanditiis distinctio autem amet sint quibusdam
+                      tempore, aliquid, praesentium dolorum, vitae accusantium
+                      alias nulla, doloremque suscipit laboriosam laudantium
+                      iusto.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  className={`${s.grid_item}
+                              ${s.desktop__oneHalf}
+                              ${s.tablet__oneWhole}
+                              ${s.push__desktop__twoTwelfths}`}
+                >
+                  <div className={s.largeSection_media}>
+                    <img src={image1} srcSet={image2} alt="phone" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
           </div>
+
         </section>
 
-        <section>
-          Section 2
-        </section>
-        <h1>
-          <img
-            className={s.badgeIcon}
-            src={php}
-            alt="PHP"
-          />
-          VetMed Schedule
-        </h1>
-        <p className={s.clearfix}>
-          <img
-            className={s.floatLeft}
-            src="https://placeholdit.imgix.net/~text?txtsize=28&txt=300%C3%97300&w=300&h=150"
-            alt="300"
-          />
-          This project was developed out of a need for a modern solution to
-          schedule and display lectures, with any associated reading
-          materials, for students, faculty, and staff at the College of
-          Veterinary Medicine, University of Illinois. In late 2015, this VetMed
-          Schedule replaced a previous system consisting of HTML tables to
-          display blocks of lectures, in use since the late 90&apos;s.
-        </p>
-
-        <p className={s.clearfix}>
-          <img
-            className={s.floatRight}
-            src="https://placeholdit.imgix.net/~text?txtsize=28&txt=300%C3%97300&w=300&h=300"
-            alt="300"
-          />
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quo
-          veniam sint, placeat magni assumenda voluptates aperiam alias
-          laudantium fuga repudiandae quisquam ipsam amet ex at adipisci quae
-          rat molestiae excepturi, voluptatem vero eligendi cum est iusto
-          veritatis! Nostrum repellat illum ab non aliquam placeat possimus
-          doloribus dolores blanditiis. Dolorem perspiciatis nemo
-          reprehenderit enim dignissimos ipsa, voluptatibus error,
-          consequuntur dicta temporibus, sint eius quo omnis suscipit
-          deleniti ratione veniam magnam molestias eaque mollitia ea ipsam ex
-          unde quasi!
-        </p>
-        <input type="checkbox" name="btn" id={s.btn} />
+        {/* <input type="checkbox" name="btn" id={s.btn} />
         <span>test</span>
-        <label className={s.btn} htmlFor={s.btn} />
+        <label className={s.btn} htmlFor={s.btn} /> */}
+
       </div>
     );
   }
