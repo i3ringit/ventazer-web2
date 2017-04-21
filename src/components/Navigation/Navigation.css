@@ -32,3 +32,10 @@
 .spacer {
   color: rgba(255, 255, 255, 0.3);
 }
+
+@media only screen and (max-width: 599px) {
+  .root {
+    -webkit-order: 2;
+    order: 2;
+  }
+}

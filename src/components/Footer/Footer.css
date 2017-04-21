@@ -21,17 +21,13 @@
   text-align: center;
 }
 
-.text {
+.copyright {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.spacer {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.text,
+.copyright,
 .link {
-  padding: 2px 5px;
+  padding: 2px 5px 2px 2px;
   font-size: 1em;
 }
 
@@ -44,4 +40,30 @@
 
 .link:hover {
   color: rgba(255, 255, 255, 1);
+}
+
+@media only screen and (max-width: 599px) {
+  .copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+  }
+
+  .link::before {
+    padding-right: 6px;
+    content: '\26AC';
+  }
+
+  .firstLink::before {
+    content: '';
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .copyright,
+  .link::before {
+    padding-right: 6px;
+    content: '\26AC';
+  }
 }
