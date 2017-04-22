@@ -51,3 +51,10 @@
 .clearLeft {
   clear: left;
 }
+
+@media only screen and (max-width: 599px) {
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
