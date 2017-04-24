@@ -41,24 +41,27 @@ class Projects extends React.Component {
             <div className={s.cardContainer}>
 
               <Card
-                cardLink="/projects/vetmed-schedule"
+                cardLink="https://schedule.mdelcristo.info/"
                 cardSrc={vetmedSchedule}
                 cardTitle="VetMed Schedule"
                 cardText="Scheduling system for the College of VetMed @ University of Illinois."
+                cardLinkText="Try Demo"
               />
 
               <Card
-                cardLink="/projects/vetmed-multisite"
+                cardLink="#."
                 cardSrc={vetmedMulti}
                 cardTitle="VetMed multisite"
                 cardText="WordPress multisite containing dozens of websites for VetMed @ Illinois."
+                cardLinkText="Coming soon"
               />
 
               <Card
-                cardLink="/projects/wordpress-sites"
+                cardLink="#."
                 cardSrc={wordpress}
                 cardTitle="WordPress sites"
                 cardText="Several WordPress sites designed and hosted for clients."
+                cardLinkText="Coming soon"
               />
 
             </div>
@@ -89,31 +92,35 @@ class Projects extends React.Component {
             <div className={s.cardContainer}>
 
               <Card
-                cardLink="/projects/my-site"
+                cardLink="#."
                 cardSrc={mySite}
                 cardTitle="This website"
                 cardText="My online portfolio, an isomorphic web app experiment."
+                cardLinkText="Coming soon"
               />
 
               <Card
-                cardLink="/projects/acvs"
+                cardLink="#."
                 cardSrc={acvs}
                 cardTitle="ACVS"
                 cardText="American College of Veterinary Surgeons' historic profiles for diplomates."
+                cardLinkText="Coming soon"
               />
 
               <Card
-                cardLink="/projects/chambana"
+                cardLink="#."
                 cardSrc={chambana}
                 cardTitle="Chambana Music"
                 cardText="A historic collection of bands formed in the Urbana-Champaign area."
+                cardLinkText="Coming soon"
               />
 
               <Card
-                cardLink="/projects/ventazer"
+                cardLink="#."
                 cardSrc={ventazer}
                 cardTitle="Ventazer"
                 cardText="Ventazer is an upcoming ticketing platform for mobile and the web."
+                cardLinkText="Coming soon"
               />
 
             </div>
@@ -134,10 +141,11 @@ class Projects extends React.Component {
 
             <div className={s.cardContainer}>
               <Card
-                cardLink="/projects/vetmed-animals"
+                cardLink="#."
                 cardSrc={vetmedAnimals}
                 cardTitle="VetMed Animals"
                 cardText="An interactive tool for veterinary students."
+                cardLinkText="Coming soon"
               />
             </div>
 

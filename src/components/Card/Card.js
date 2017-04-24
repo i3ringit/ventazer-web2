@@ -15,6 +15,7 @@ class Card extends React.Component {
     cardSrc: PropTypes.string.isRequired,
     cardTitle: PropTypes.string.isRequired,
     cardText: PropTypes.string.isRequired,
+    cardLinkText: PropTypes.string.isRequired,
   };
 
   render() {
@@ -26,9 +27,9 @@ class Card extends React.Component {
         <div className={s.innerCard}>
           <h2>{this.props.cardTitle}</h2>
           <p>{this.props.cardText}</p>
-          <Link to={this.props.cardLink} className={s.btn}>
-            Learn More
-          </Link>
+          <a href={this.props.cardLink} className={s.btn}>
+            {this.props.cardLinkText}
+          </a>
         </div>
       </div>
     );
