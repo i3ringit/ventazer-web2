@@ -20,8 +20,11 @@ class Contact extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <h1>{this.props.title}</h1>
-          <p>...</p>
+          <h1>Contact Me</h1>
+          <p>
+            Email: contact@mdelcristo.info<br />
+            Phone: (217) 862-4207
+          </p>
         </div>
       </div>
     );
