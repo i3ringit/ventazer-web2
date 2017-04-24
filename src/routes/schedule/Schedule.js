@@ -17,9 +17,9 @@ class Schedule extends React.Component {
 
   render() {
     return (
-      <div>
+      <main id="main" role="main">
 
-        <section className={`${s.largeSection} ${s.uTightBottom} ${s.uBgGrayLight}`}>
+        <section className={`${s.largeSection} ${s.tightBottom} ${s.bgGrayLight}`}>
 
           <div className={s.container}>
 
@@ -33,7 +33,7 @@ class Schedule extends React.Component {
             </div>
 
             <div className={`${s.largeSection} ${s.largeSection_textAndMedia}`}>
-              <div className={`${s.grid} ${s.grid__middle} ${s.uGrid__override}`}>
+              <div className={`${s.grid} ${s.grid__middle} ${s.grid__override}`}>
 
                 <div className={`${s.grid_item} ${s.desktop__oneHalf} ${s.tablet__oneWhole}`}>
                   <div className={s.largeSection_media}>
@@ -70,9 +70,9 @@ class Schedule extends React.Component {
               className={`${s.largeSection}
                           ${s.largeSection_textAndMedia}
                           ${s.largeSection_mediaDeskRight}
-                          ${s.uTightBottom}`}
+                          ${s.tightBottom}`}
             >
-              <div className={`${s.grid} ${s.grid__middle} ${s.uGrid__override}`}>
+              <div className={`${s.grid} ${s.grid__middle} ${s.grid__override}`}>
 
                 <div
                   className={`${s.grid_item}
@@ -118,7 +118,7 @@ class Schedule extends React.Component {
         <span>test</span>
         <label className={s.btn} htmlFor={s.btn} /> */}
 
-      </div>
+      </main>
     );
   }
 }

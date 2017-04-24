@@ -15,7 +15,7 @@ import Link from '../Link';
 class Footer extends React.Component {
   render() {
     return (
-      <div className={s.root}>
+      <footer className={s.root} role="contentinfo">
         <div className={s.container}>
           <span className={s.copyright}>© 2017 &nbsp; Marcos del Cristo</span>
           <Link className={`${s.link} ${s.firstLink}`} to="/">Home</Link>
@@ -23,7 +23,7 @@ class Footer extends React.Component {
           <Link className={s.link} to="/contact">Contact</Link>
           <Link className={s.link} to="/privacy">Privacy</Link>
         </div>
-      </div>
+      </footer>
     );
   }
 }

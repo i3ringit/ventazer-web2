@@ -27,12 +27,23 @@ class Projects extends React.Component {
 
   render() {
     return (
-      <div className={s.root}>
-        <div className={s.container}>
-          <h1>Projects</h1>
-          <p>The following is a list of my latest projects as of the past two
-             or so years, organized by language.</p>
+      <main id="main" role="main">
 
+        <section className={`${s.largeSection} ${s.tightBottom} ${s.bgGrayLight}`} id="intro">
+          <div className={s.container}>
+            <div className={s.section_intro}>
+              <h2 className={s.textLarge}>
+                Projects
+              </h2>
+              <p className={s.textNormal}>
+                The following is a list of my latest projects as of the past two
+                or so years, organized by language.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="php">
           <h2>
             <img
               className={s.badgeIcon}
@@ -44,36 +55,31 @@ class Projects extends React.Component {
 
           <div className={s.cardContainer}>
 
-            <div className={s.first}>
-              <Card
-                cardLink="/projects/vetmed-schedule"
-                cardSrc={vetmedSchedule}
-                cardTitle="VetMed Schedule"
-                cardText="Scheduling system for VetMed @ University of Illinois."
-              />
-            </div>
+            <Card
+              cardLink="/projects/vetmed-schedule"
+              cardSrc={vetmedSchedule}
+              cardTitle="VetMed Schedule"
+              cardText="Scheduling system for VetMed @ University of Illinois."
+            />
 
-            <div className={s.second}>
-              <Card
-                cardLink="/projects/vetmed-multisite"
-                cardSrc={vetmedMulti}
-                cardTitle="VetMed multisite"
-                cardText="WordPress multisite containing dozens of websites."
-              />
-            </div>
+            <Card
+              cardLink="/projects/vetmed-multisite"
+              cardSrc={vetmedMulti}
+              cardTitle="VetMed multisite"
+              cardText="WordPress multisite containing dozens of websites."
+            />
 
-            <div className={s.third}>
-              <Card
-                cardLink="/projects/wordpress-sites"
-                cardSrc={wordpress}
-                cardTitle="WordPress sites"
-                cardText="Several WordPress sites designed and hosted for clients."
-              />
-            </div>
+            <Card
+              cardLink="/projects/wordpress-sites"
+              cardSrc={wordpress}
+              cardTitle="WordPress sites"
+              cardText="Several WordPress sites designed and hosted for clients."
+            />
 
-            <div className={s.clearLeft} />
           </div>
+        </section>
 
+        <section id="js">
           <h2>
             <img
               className={s.badgeIcon}
@@ -85,50 +91,38 @@ class Projects extends React.Component {
 
           <div className={s.cardContainer}>
 
-            <div className={s.first}>
-              <Card
-                cardLink="/projects/my-site"
-                cardSrc={mySite}
-                cardTitle="This website"
-                cardText="My online portfolio, an isomorphic web app experiment."
-              />
-            </div>
+            <Card
+              cardLink="/projects/my-site"
+              cardSrc={mySite}
+              cardTitle="This website"
+              cardText="My online portfolio, an isomorphic web app experiment."
+            />
 
-            <div className={s.second}>
-              <Card
-                cardLink="/projects/acvs"
-                cardSrc={acvs}
-                cardTitle="ACVS"
-                cardText="WordPress multisite containing dozens of websites."
-              />
-            </div>
+            <Card
+              cardLink="/projects/acvs"
+              cardSrc={acvs}
+              cardTitle="ACVS"
+              cardText="WordPress multisite containing dozens of websites."
+            />
 
-            <div className={s.third}>
-              <Card
-                cardLink="/projects/chambana"
-                cardSrc={chambana}
-                cardTitle="Chambana Music"
-                cardText="Several WordPress sites designed and hosted for clients."
-              />
-            </div>
+            <Card
+              cardLink="/projects/chambana"
+              cardSrc={chambana}
+              cardTitle="Chambana Music"
+              cardText="Several WordPress sites designed and hosted for clients."
+            />
 
-            <div className={s.clearLeft} />
+            <Card
+              cardLink="/projects/ventazer"
+              cardSrc={ventazer}
+              cardTitle="Ventazer"
+              cardText="Ventazer is an upcoming ticketing platform for mobile and the web."
+            />
+
           </div>
+        </section>
 
-          <div className={s.cardContainer}>
-
-            <div className={s.fourth}>
-              <Card
-                cardLink="/projects/ventazer"
-                cardSrc={ventazer}
-                cardTitle="Ventazer"
-                cardText="Ventazer is an upcoming ticketing platform for mobile and the web."
-              />
-            </div>
-
-            <div className={s.clearLeft} />
-          </div>
-
+        <section id="cpp">
           <h2>
             <img
               className={s.badgeIcon}
@@ -140,19 +134,17 @@ class Projects extends React.Component {
 
           <div className={s.cardContainer}>
 
-            <div className={s.first}>
-              <Card
-                cardLink="/projects/vetmed-animals"
-                cardSrc={vetmedAnimals}
-                cardTitle="VetMed Animals"
-                cardText="An interactive tool for veterinary students."
-              />
-            </div>
+            <Card
+              cardLink="/projects/vetmed-animals"
+              cardSrc={vetmedAnimals}
+              cardTitle="VetMed Animals"
+              cardText="An interactive tool for veterinary students."
+            />
 
-            <div className={s.clearLeft} />
           </div>
-        </div>
-      </div>
+        </section>
+
+      </main>
     );
   }
 }

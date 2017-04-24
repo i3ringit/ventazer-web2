@@ -16,7 +16,7 @@ import Navigation from '../Navigation';
 class Header extends React.Component {
   render() {
     return (
-      <div className={s.root}>
+      <header className={s.root} role="banner">
         <div className={s.container}>
           <Navigation />
           <Link className={s.brand} to="/">
@@ -27,7 +27,7 @@ class Header extends React.Component {
             <p className={s.bannerDesc}>to my online portfolio</p>
           </div>
         </div>
-      </div>
+      </header>
     );
   }
 }

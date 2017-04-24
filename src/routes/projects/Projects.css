@@ -6,15 +6,11 @@
 
 @import '../../components/variables.css';
 
-.root {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 .container {
   margin: 0 auto;
-  padding: 0 0 40px;
-  max-width: var(--max-content-width);
+  max-width: 1440px;
+  min-width: 320px;
+  padding: 0 20px;
 }
 
 .badgeIcon {
@@ -22,39 +18,115 @@
 }
 
 .cardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   text-align: center;
   margin-bottom: 40px;
 }
 
-.first {
-  float: left;
-  width: 30%;
+/* Section */
+.largeSection {
+  padding: 30px 0;
 }
 
-.second {
+/* Section intro */
+
+.section_intro {
   margin: 0 auto;
-  display: inline-block;
-  width: 30%;
+  max-width: 285px;
+  text-align: center;
 }
 
-.third {
-  float: right;
-  width: 30%;
+.textLarge {
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: 400;
 }
 
-.fourth {
-  float: left;
-  width: 30%;
+.textNormal {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0.75em 0;
 }
 
-.clearLeft {
-  clear: left;
-}
-
-@media only screen and (max-width: 599px) {
-  .cardContainer {
-    display: flex;
-    flex-direction: column;
+@media only screen and (min-width: 600px) {
+  .container {
+    box-sizing: initial;
+    padding: 0 40px;
   }
+
+  .section_intro {
+    max-width: 80%;
+  }
+
+  .textLarge {
+    font-size: 26px;
+    font-size: 1.625rem;
+  }
+
+  .textNormal {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+
+  .cardContainer {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .section_intro {
+    max-width: 550px;
+  }
+}
+
+@media only screen and (max-width: 999px) and (min-width: 600px) {
+  .largeSection {
+    padding: 45px 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .section_intro {
+    max-width: 60%;
+  }
+
+  .textLarge {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+
+  .textNormal {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+
+  .largeSection {
+    padding: 60px 0;
+  }
+}
+
+/* Section intro heading */
+
+.section_intro h1,
+.section_intro h2 {
+  margin-bottom: 0.3em;
+}
+
+.section_intro p {
+  margin: 0;
+}
+
+.bgGrayLight {
+  background-color: #f5f5f5 !important;
+}
+
+.tightBottom {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }

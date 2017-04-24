@@ -102,7 +102,7 @@ img {
   padding: 30px 0;
 }
 
-.largeSection_textAndMedia .uGrid__override {
+.largeSection_textAndMedia .grid__override {
   padding-top: 0;
 }
 
@@ -174,7 +174,7 @@ img {
     font-size: 1.25rem;
   }
 
-  .largeSection_textAndMedia .uGrid__override {
+  .largeSection_textAndMedia .grid__override {
     padding-top: 60px;
   }
 }
@@ -197,7 +197,7 @@ img {
     margin-bottom: 0;
   }
 
-  .largeSection_mediaDeskRight .uGrid__override {
+  .largeSection_mediaDeskRight .grid__override {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -255,7 +255,7 @@ img {
     padding: 60px 0;
   }
 
-  .largeSection_textAndMedia .uGrid__override {
+  .largeSection_textAndMedia .grid__override {
     padding-top: 60px;
   }
 
@@ -284,7 +284,7 @@ img {
   }
 }
 
-.uBgGrayLight {
+.bgGrayLight {
   background-color: #f5f5f5 !important;
 }
 
@@ -299,7 +299,7 @@ img {
   margin: 0;
 }
 
-.uTightBottom {
+.tightBottom {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
 }

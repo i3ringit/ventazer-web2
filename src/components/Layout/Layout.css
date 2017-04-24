@@ -23,6 +23,33 @@ html {
   line-height: 1.375; /* ~22px */
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h2 {
+  font-size: 29px;
+  font-size: 1.8125rem;
+}
+
+h3 {
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+
 a {
   color: #0074c2;
 }
