@@ -10,8 +10,7 @@
 @import '../variables.css';
 
 .root {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 30px 20px;
 }
 
 .container {

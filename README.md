@@ -1,7 +1,3 @@
----
-title: About
-component: ContentPage
----
 # About Me
 
 To all recruiters, welcome.

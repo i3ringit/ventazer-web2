@@ -6,7 +6,7 @@
 
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Schedule.css';
+import s from '../../components/projects.css';
 import image1 from './img/phone-1_1x.jpg';
 import image2 from './img/phone-1_2x.jpg';
 

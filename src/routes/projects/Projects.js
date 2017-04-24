@@ -8,9 +8,6 @@ import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Projects.css';
 import Card from '../../components/Card';
-import cpp from './img/badges/badge-cpp.png';
-import js from './img/badges/badge-js.png';
-import php from './img/badges/badge-php.png';
 import acvs from './img/thumbnails/acvs.jpg';
 import chambana from './img/thumbnails/chambana-music.jpg';
 import mySite from './img/thumbnails/my-website.jpg';
@@ -29,117 +26,120 @@ class Projects extends React.Component {
     return (
       <main id="main" role="main">
 
-        <section className={`${s.largeSection} ${s.tightBottom} ${s.bgGrayLight}`} id="intro">
+        <section className={`${s.largeSection} ${s.bgGray}`} id="php">
           <div className={s.container}>
             <div className={s.section_intro}>
               <h2 className={s.textLarge}>
-                Projects
+                PHP Projects
               </h2>
               <p className={s.textNormal}>
-                The following is a list of my latest projects as of the past two
-                or so years, organized by language.
+                These projects use PHP in the back-end and a number of
+                javascript libraries in the front end.
               </p>
+            </div>
+
+            <div className={s.cardContainer}>
+
+              <Card
+                cardLink="/projects/vetmed-schedule"
+                cardSrc={vetmedSchedule}
+                cardTitle="VetMed Schedule"
+                cardText="Scheduling system for the College of VetMed @ University of Illinois."
+              />
+
+              <Card
+                cardLink="/projects/vetmed-multisite"
+                cardSrc={vetmedMulti}
+                cardTitle="VetMed multisite"
+                cardText="WordPress multisite containing dozens of websites for VetMed @ Illinois."
+              />
+
+              <Card
+                cardLink="/projects/wordpress-sites"
+                cardSrc={wordpress}
+                cardTitle="WordPress sites"
+                cardText="Several WordPress sites designed and hosted for clients."
+              />
+
             </div>
           </div>
         </section>
 
-        <section id="php">
-          <h2>
-            <img
-              className={s.badgeIcon}
-              src={php}
-              alt="PHP"
-            />
-            PHP Projects
-          </h2>
+        <section className={`${s.largeSection} ${s.bgGrayLight}`} id="js">
+          {/*
+          <div
+            className={`${s.cardContainerWrapper}
+                        ${s.hasDiagonalTopGrayDark}
+                        ${s.hasDiagonalBottomGrayDark}`}
+          >
+          </div>
+          */}
 
-          <div className={s.cardContainer}>
+          <div className={s.container}>
+            <div className={s.section_intro}>
+              <h2 className={s.textLarge}>
+                JavaScript Projects
+              </h2>
+              <p className={s.textNormal}>
+                These projects are written in Javascript for the back and
+                front-end. The stacks consist mostly of Node.js and Express.js
+                in the back-end, and Angular or React for the front-end.
+              </p>
+            </div>
+            <div className={s.cardContainer}>
 
-            <Card
-              cardLink="/projects/vetmed-schedule"
-              cardSrc={vetmedSchedule}
-              cardTitle="VetMed Schedule"
-              cardText="Scheduling system for VetMed @ University of Illinois."
-            />
+              <Card
+                cardLink="/projects/my-site"
+                cardSrc={mySite}
+                cardTitle="This website"
+                cardText="My online portfolio, an isomorphic web app experiment."
+              />
 
-            <Card
-              cardLink="/projects/vetmed-multisite"
-              cardSrc={vetmedMulti}
-              cardTitle="VetMed multisite"
-              cardText="WordPress multisite containing dozens of websites."
-            />
+              <Card
+                cardLink="/projects/acvs"
+                cardSrc={acvs}
+                cardTitle="ACVS"
+                cardText="American College of Veterinary Surgeons' historic profiles for diplomates."
+              />
 
-            <Card
-              cardLink="/projects/wordpress-sites"
-              cardSrc={wordpress}
-              cardTitle="WordPress sites"
-              cardText="Several WordPress sites designed and hosted for clients."
-            />
+              <Card
+                cardLink="/projects/chambana"
+                cardSrc={chambana}
+                cardTitle="Chambana Music"
+                cardText="A historic collection of bands formed in the Urbana-Champaign area."
+              />
 
+              <Card
+                cardLink="/projects/ventazer"
+                cardSrc={ventazer}
+                cardTitle="Ventazer"
+                cardText="Ventazer is an upcoming ticketing platform for mobile and the web."
+              />
+
+            </div>
           </div>
         </section>
 
-        <section id="js">
-          <h2>
-            <img
-              className={s.badgeIcon}
-              src={js}
-              alt="Javascript"
-            />
-            Javascript Projects
-          </h2>
+        <section className={`${s.largeSection} ${s.bgGray}`} id="cpp">
+          <div className={s.container}>
+            <div className={s.section_intro}>
+              <h2 className={s.textLarge}>
+                C++ Projects
+              </h2>
+              <p className={s.textNormal}>
+                This project was developed using Unreal Engine for the College
+                of Veterinary Medicine at the University of Illinois.
+              </p>
+            </div>
 
-          <div className={s.cardContainer}>
-
-            <Card
-              cardLink="/projects/my-site"
-              cardSrc={mySite}
-              cardTitle="This website"
-              cardText="My online portfolio, an isomorphic web app experiment."
-            />
-
-            <Card
-              cardLink="/projects/acvs"
-              cardSrc={acvs}
-              cardTitle="ACVS"
-              cardText="WordPress multisite containing dozens of websites."
-            />
-
-            <Card
-              cardLink="/projects/chambana"
-              cardSrc={chambana}
-              cardTitle="Chambana Music"
-              cardText="Several WordPress sites designed and hosted for clients."
-            />
-
-            <Card
-              cardLink="/projects/ventazer"
-              cardSrc={ventazer}
-              cardTitle="Ventazer"
-              cardText="Ventazer is an upcoming ticketing platform for mobile and the web."
-            />
-
-          </div>
-        </section>
-
-        <section id="cpp">
-          <h2>
-            <img
-              className={s.badgeIcon}
-              src={cpp}
-              alt="C++"
-            />
-            C++ Projects
-          </h2>
-
-          <div className={s.cardContainer}>
-
-            <Card
-              cardLink="/projects/vetmed-animals"
-              cardSrc={vetmedAnimals}
-              cardTitle="VetMed Animals"
-              cardText="An interactive tool for veterinary students."
-            />
+            <div className={s.cardContainer}>
+              <Card
+                cardLink="/projects/vetmed-animals"
+                cardSrc={vetmedAnimals}
+                cardTitle="VetMed Animals"
+                cardText="An interactive tool for veterinary students."
+              />
+            </div>
 
           </div>
         </section>

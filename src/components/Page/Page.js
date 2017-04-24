@@ -19,14 +19,14 @@ class Page extends React.Component {
   render() {
     const { html } = this.props;
     return (
-      <div className={s.root}>
+      <main className={s.root} role="main" id="main">
         <div className={s.container}>
           <div
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
-      </div>
+      </main>
     );
   }
 }
