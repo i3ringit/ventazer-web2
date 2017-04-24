@@ -7,8 +7,10 @@
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from '../../components/projects.css';
-import image1 from './img/phone-1_1x.jpg';
-import image2 from './img/phone-1_2x.jpg';
+import macSchedule1x from './img/mac-schedule_1x.png';
+import macSchedule2x from './img/mac-schedule_2x.png';
+import tabletSchedule1x from './img/tablet-schedule_1x.png';
+import tabletSchedule2x from './img/tablet-schedule_2x.png';
 
 class Schedule extends React.Component {
   static propTypes = {
@@ -37,7 +39,7 @@ class Schedule extends React.Component {
 
                 <div className={`${s.grid_item} ${s.desktop__oneHalf} ${s.tablet__oneWhole}`}>
                   <div className={s.largeSection_media}>
-                    <img src={image1} srcSet={image2} alt="phone" />
+                    <img src={macSchedule1x} srcSet={macSchedule2x} alt="VetMed calendar on a Mac." />
                   </div>
                 </div>
 
@@ -103,11 +105,24 @@ class Schedule extends React.Component {
                               ${s.push__desktop__twoTwelfths}`}
                 >
                   <div className={s.largeSection_media}>
-                    <img src={image1} srcSet={image2} alt="phone" />
+                    <img src={tabletSchedule1x} srcSet={tabletSchedule2x} alt="Admin schedule on a tablet." />
                   </div>
                 </div>
 
               </div>
+            </div>
+
+            <div className={s.learnMore}>
+              <a
+                href="https://schedule.mdelcristo.info/"
+                rel="noopener noreferrer"
+                target="_blank"
+                className={s.btn}
+                draggable="false"
+                aria-hidden="false"
+              >
+                Try Demo!
+              </a>
             </div>
 
           </div>

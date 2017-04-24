@@ -42,6 +42,31 @@
   }
 }
 
+.learnMore {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.btn {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: transparent;
+  color: #2196f3;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  padding: 12px 46px;
+  text-transform: uppercase;
+  -webkit-transition: all 100ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: all 100ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
 /* Button */
 
 .button {

@@ -26,7 +26,7 @@ class Card extends React.Component {
         <div className={s.innerCard}>
           <h2>{this.props.cardTitle}</h2>
           <p>{this.props.cardText}</p>
-          <Link to={this.props.cardLink}>
+          <Link to={this.props.cardLink} className={s.btn}>
             Learn More
           </Link>
         </div>
