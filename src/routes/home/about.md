@@ -20,7 +20,7 @@ My name is Marcos del Cristo, I am a software developer residing in Champaign, I
 
 **Language Preferences:**
 
-* Interpreted languages, preferably Javascript; I’d love to improve my Node.js chops. Python is fine too. I’ve worked with PHP for several projects in the past (VetMed Scheduler, WordPress) and, although I’m not fatally allergic to the language, I’d rather work with Javascript.
+* Interpreted languages, preferably Javascript; I’d love to improve my Node.js chops. Python is fine too. I’ve also worked with PHP for several projects in the past (VetMed Scheduler, WordPress).
 * Compiled languages, preferably Java. Alternatively, C, C++, or Go. Although I have limited experience in these languages, I’d love to work on high-performance code.
 
 ## A little about me
